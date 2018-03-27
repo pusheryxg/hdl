@@ -45,6 +45,7 @@
 module axi_jesd204_rx_tb;
   parameter VCD_FILE = "axi_jesd204_rx_regmap_tb.vcd";
   parameter NUM_LANES = 2;
+  parameter NUM_LINKS = 1;
 
   `define TIMEOUT 1000000
   `include "tb_base.v"
@@ -308,7 +309,8 @@ module axi_jesd204_rx_tb;
   end
 
   axi_jesd204_rx #(
-    .NUM_LANES(NUM_LANES)
+    .NUM_LANES(NUM_LANES),
+    .NUM_LINKS(NUM_LINKS)
   ) i_axi (
     .s_axi_aclk(s_axi_aclk),
     .s_axi_aresetn(s_axi_aresetn),
