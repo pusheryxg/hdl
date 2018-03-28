@@ -5,11 +5,11 @@
 
 LIBRARY_NAME := jesd204_tx
 
+M_DEPS += jesd204_tx.v
 M_DEPS += jesd204_tx_constr.xdc
+M_DEPS += jesd204_tx_ctrl.v
 M_DEPS += jesd204_tx_ip.tcl
-M_DEPS += tx.v
-M_DEPS += tx_ctrl.v
-M_DEPS += tx_lane.v
+M_DEPS += jesd204_tx_lane.v
 
 M_DEPS += ../../jesd204/interfaces/jesd204_tx_cfg.xml
 M_DEPS += ../../jesd204/interfaces/jesd204_tx_cfg_rtl.xml

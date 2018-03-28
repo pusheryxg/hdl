@@ -5,10 +5,10 @@
 
 LIBRARY_NAME := jesd204_common
 
-M_DEPS += eof.v
 M_DEPS += jesd204_common_ip.tcl
-M_DEPS += lmfc.v
+M_DEPS += jesd204_eof_generator.v
+M_DEPS += jesd204_lmfc.v
+M_DEPS += jesd204_scrambler.v
 M_DEPS += pipeline_stage.v
-M_DEPS += scrambler.v
 
 include ../../scripts/library.mk

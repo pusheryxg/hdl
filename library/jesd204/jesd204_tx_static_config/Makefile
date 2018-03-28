@@ -5,9 +5,9 @@
 
 LIBRARY_NAME := jesd204_tx_static_config
 
-M_DEPS += ilas_cfg_static.v
+M_DEPS += jesd204_ilas_cfg_static.v
+M_DEPS += jesd204_tx_static_config.v
 M_DEPS += jesd204_tx_static_config_ip.tcl
-M_DEPS += tx_static_config.v
 
 M_DEPS += ../../jesd204/interfaces/jesd204_tx_cfg.xml
 M_DEPS += ../../jesd204/interfaces/jesd204_tx_cfg_rtl.xml

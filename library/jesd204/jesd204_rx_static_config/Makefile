@@ -5,8 +5,8 @@
 
 LIBRARY_NAME := jesd204_rx_static_config
 
+M_DEPS += jesd204_rx_static_config.v
 M_DEPS += jesd204_rx_static_config_ip.tcl
-M_DEPS += rx_static_config.v
 
 M_DEPS += ../../jesd204/interfaces/jesd204_rx_cfg.xml
 M_DEPS += ../../jesd204/interfaces/jesd204_rx_cfg_rtl.xml
