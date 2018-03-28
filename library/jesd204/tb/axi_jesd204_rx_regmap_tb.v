@@ -273,6 +273,10 @@ module axi_jesd204_rx_tb;
     write_reg_and_update('h200, {NUM_LANES{1'b1}});
     check_all_registers();
 
+    /* Check links enable */
+    write_reg_and_update('h204, {NUM_LINKS{1'b1}});
+    check_all_registers();
+
     /* Check JESD common config */
     write_reg_and_update('h210, 32'hff03ff);
     check_all_registers();
@@ -288,10 +292,10 @@ module axi_jesd204_rx_tb;
     check_all_registers();
 
     /* Should be read-only when core is out of reset */
-    invert_register('h200);
-    invert_register('h204);
-    invert_register('h210);
-    invert_register('h240);
+    invert_register('h200); /* lanes enable */
+    invert_register('h204); /* links enable */
+    invert_register('h210); /* octets per frame, beats per multiframe */
+    invert_register('h240); /* char replacement, scrambler */
 
     check_all_registers();
 
