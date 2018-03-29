@@ -110,7 +110,7 @@ add_interface_port sysref sysref export Input 1
 add_interface sync conduit end
 set_interface_property sync associatedClock clock
 set_interface_property sync associatedReset reset
-add_interface_port sync sync export Output 1
+add_interface_port sync sync export Output NUM_LINKS
 
 # config interface
 
