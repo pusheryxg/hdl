@@ -151,7 +151,7 @@ proc adi_axi_jesd204_rx_create {ip_name num_lanes {num_links 1}} {
 
     # JESD204 processing
     create_bd_pin -dir I -type clk "${ip_name}/device_clk"
-    create_bd_pin -dir O -from [expr $num_links - 1] to 0 "${ip_name}/sync"
+    create_bd_pin -dir O -from [expr $num_links - 1] -to 0 "${ip_name}/sync"
     create_bd_pin -dir I "${ip_name}/sysref"
     create_bd_pin -dir O "${ip_name}/phy_en_char_align"
 #    create_bd_pin -dir I "${ip_name}/phy_ready"
